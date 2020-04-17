@@ -1,0 +1,5 @@
+FROM centos:centos7.7.1908
+RUN yum -y update 
+RUN yum install -y httpd httpd-tools
+EXPOSE  80
+CMD     ["/usr/sbin/httpd","-D","FOREGROUND"]
